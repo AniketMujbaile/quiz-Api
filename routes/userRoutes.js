@@ -2,6 +2,9 @@ import express from 'express';
 const router = express.Router();
 import UserController from '../controllers/userController.js';
 import checkUserAuth from '../middlewares/auth-middleware.js';
+import { homePage } from '../controllers/HomeController.js';
+
+router.get('/',homePage)
 
 // Route Level Middleware - To Protect Route
 router.use('/changepassword', checkUserAuth)

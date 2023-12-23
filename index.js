@@ -23,6 +23,7 @@ const DATABASE_URL = process.env.DATABASE_URL
 connectDB(DATABASE_URL)
 
 // Routes
+app.use('/', userRoutes);
 app.use('/api/user', quizRoutes)
 app.use('/api/user', userRoutes)
 
